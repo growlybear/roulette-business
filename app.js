@@ -40,10 +40,6 @@ Game.prototype.play = function () {
     while (this.progress < this.cashout) {
         this.spinTheWheel(i++);
     }
-
-    this.displayResults();
-
-    // TODO collect stats
 };
 
 Game.prototype.displayResults = function () {
@@ -94,6 +90,7 @@ Game.prototype.roundUpToNearestFive = function (num) {
 [0,1,2,3,4,5].forEach(function (range) {
     var game = new Game(180, range, 50);
     game.play();
+    game.displayResults();
 });
 
 
