@@ -1,4 +1,5 @@
 var GameDisplay = require('./GameDisplay');
+
 var ranges = require('../data/ranges');
 var spins = require('../data/spins');
 
