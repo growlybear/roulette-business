@@ -14,7 +14,8 @@ module.exports = React.createClass({
                   <a href="#" onClick={ this.play }>Play Again</a>
                 </li>
               </ul>
-              <h3 className="text-muted">Strategic Testing Ground</h3>
+
+              <h2>Roulette Strategy <small>Testing Ground</small></h2>
             </div>
         );
     }

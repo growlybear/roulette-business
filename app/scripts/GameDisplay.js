@@ -7,8 +7,6 @@ var GameDisplay = function () {
 };
 
 GameDisplay.prototype.headers = function (arr) {
-    if (this.head) return new Error('Head already set');
-
     this.columns = arr.length;
     this.data.head = arr;
 };
