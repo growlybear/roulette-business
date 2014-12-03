@@ -15,7 +15,7 @@ module.exports = React.createClass({
                 </li>
               </ul>
 
-              <h2>Roulette Strategy <small>Testing Ground</small></h2>
+              <h2>Roulette Strategy <small>- Testing Ground</small></h2>
             </div>
         );
     }

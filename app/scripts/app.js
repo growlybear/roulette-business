@@ -74,11 +74,11 @@ var RouletteApp = React.createClass({
                 <Header />
 
                 <div className="row">
-                    <div className="col-md-8">
-                        <GameConfig />
-                    </div>
-                    <div className="col-md-4">
+                    <div className="col-md-7">
                         <GameNumbers series={ this.state.numbers } />
+                    </div>
+                    <div className="col-md-5">
+                        <GameConfig target={ this.state.target } wager={ this.state.wager } start={ this.state.startSpinsAt } />
                     </div>
                 </div>
 
