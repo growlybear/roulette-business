@@ -12,6 +12,7 @@ var Header = require('./ui/Header.react');
 var GameNumbers = require('./ui/GameNumbers.react');
 var GameConfig = require('./ui/GameConfig.react');
 var GameStats = require('./ui/GameStats.react');
+var Games = require('./ui/Games.react');
 
 var Footer = require('./ui/Footer.react');
 
@@ -86,6 +87,8 @@ var RouletteApp = React.createClass({
                 <div className="row">
                     <div className="col-md-12"><GameStats /></div>
                 </div>
+
+                <Games games={ this.state.games } />
 
                 <ol>
                 { this.state.games.map(function (game) {

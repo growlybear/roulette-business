@@ -11,14 +11,16 @@ module.exports = React.createClass({
                   <div className="col-md-6">
                     <ul className="list-unstyled">
                       <li><strong>Quickest game:</strong> 53</li>
+                      <li><strong>Longest game:</strong> 53</li>
                       <li><strong>Highest winnings:</strong> 53</li>
-                      <li><strong>Average winnings:</strong> 53</li>
+                      <li><strong>Lowest winnings:</strong> 53</li>
                     </ul>
                   </div>
 
                   <div className="col-md-6">
                     <ul className="list-unstyled">
                       <li><strong>Largest drawdown:</strong> 53</li>
+                      <li><strong>Longest losing streak:</strong> 53</li>
                       <li><strong>Longest losing streak:</strong> 53</li>
                     </ul>
                   </div>
