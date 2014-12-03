@@ -9,7 +9,9 @@ var spins = require('../data/spins');
 var Game = require('./Game');
 
 var Header = require('./ui/Header.react');
-var Main = require('./ui/Main.react');
+var GameNumbers = require('./ui/GameNumbers.react');
+var GameConfig = require('./ui/GameConfig.react');
+
 var Footer = require('./ui/Footer.react');
 
 var RouletteApp = React.createClass({
@@ -58,6 +60,7 @@ var RouletteApp = React.createClass({
     /**
         <div className="container">
             <Header />
+            <GameConfig />
             <GameNumbers />
             <GameStats />
             <Games />
@@ -67,7 +70,18 @@ var RouletteApp = React.createClass({
     render: function () {
         return (
             <div className="container">
+
                 <Header />
+
+                <div className="row">
+                    <div className="col-md-8">
+                        <GameConfig />
+                    </div>
+                    <div className="col-md-4">
+                        <GameNumbers series={ this.state.numbers } />
+                    </div>
+                </div>
+
                 <ol>
                 { this.state.games.map(function (game) {
                     return <li key={ game.id }>{ game }</li>;
