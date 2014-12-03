@@ -3,7 +3,7 @@ var React = require('react');
 module.exports = React.createClass({
     render: function () {
         return (
-            <div>
+            <div className="game-stats">
               <h4>Game stats:</h4>
 
               <div className="well">
