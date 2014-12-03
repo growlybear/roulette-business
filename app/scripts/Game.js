@@ -22,6 +22,7 @@ var Game = function (target, range, start) {
     );
 
     // Track game stats
+    this.numbers = [];
     this.losses = 0;
     this.rounds = 0;
 };
@@ -34,14 +35,17 @@ Game.prototype.play = function () {
     }
 };
 
-Game.prototype.displayResults = function () {
-    console.log(JSON.stringify(this.table));
+Game.prototype.results = function () {
+    return JSON.stringify(this.table);
 };
 
 Game.prototype.spinTheWheel = function (index) {
 
     // Grab the next number from the random series
     var spin = spins[index];
+
+    // Remember the number spun
+    this.remember(spin);
 
     // If spin is in the range, add winnings to kitty, otherwise subtract wager
     this.result = ranges[this.range].indexOf(spin) !== -1 ? this.wager * 5 : -this.wager;
@@ -70,6 +74,14 @@ Game.prototype.spinTheWheel = function (index) {
 
     // Modify our wager
     this.wager = this.roundUpToNearestFive(this.target / this.divisor);
+};
+
+Game.prototype.remember = function (num) {
+    this.numbers.push(num);
+};
+
+Game.prototype.getNumbers = function () {
+    return this.numbers;
 };
 
 Game.prototype.roundUpToNearestFive = function (num) {
