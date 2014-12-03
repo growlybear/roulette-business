@@ -18,7 +18,7 @@ var Game = function (target, range, start) {
     // Display results
     this.table = new GameDisplay();
     this.table.headers(
-        ['Range', 'Target', 'Divisor', 'Bet', 'Spin', 'Result', 'Progress']
+        ['', '#', 'Target', 'Divisor', 'Bet', 'Spin', 'Result', 'Progress']
     );
 
     // Track game stats
@@ -55,7 +55,7 @@ Game.prototype.spinTheWheel = function (index) {
 
     // Add the results of this spin to our table
     this.table.row([
-        this.range + 1, this.target, this.divisor, this.wager, spin, this.result, this.progress
+        '', index - this.start + 1, this.target, this.divisor, this.wager, spin, this.result, this.progress
     ]);
 
     // Modify our target to accommodate losses

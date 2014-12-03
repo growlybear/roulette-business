@@ -90,12 +90,6 @@ var RouletteApp = React.createClass({
 
                 <Games games={ this.state.games } />
 
-                <ol>
-                { this.state.games.map(function (game) {
-                    return <li key={ game.id }>{ game }</li>;
-                })}
-                </ol>
-
                 <Footer />
             </div>
         );

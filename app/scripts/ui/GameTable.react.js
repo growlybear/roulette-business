@@ -5,8 +5,10 @@ var TableRow = require('./TableRow.react');
 
 module.exports = React.createClass({
     render: function () {
-      var rows = [];
-      var cells = [];
+
+        var rows = [];
+        var cells = [];
+
         return (
             <Table striped condensed hover>
               <thead>
@@ -21,7 +23,6 @@ module.exports = React.createClass({
                       cells = [];
 
                       body.forEach(function (val, j) {
-                          console.log('Boooo', val, i);
                           cells.push(<td key={ 'body-' + i + 'cell-' + j }>{ val }</td>);
                       })
 
