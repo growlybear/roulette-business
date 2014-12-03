@@ -11,6 +11,7 @@ var Game = require('./Game');
 var Header = require('./ui/Header.react');
 var GameNumbers = require('./ui/GameNumbers.react');
 var GameConfig = require('./ui/GameConfig.react');
+var GameStats = require('./ui/GameStats.react');
 
 var Footer = require('./ui/Footer.react');
 
@@ -74,12 +75,16 @@ var RouletteApp = React.createClass({
                 <Header />
 
                 <div className="row">
-                    <div className="col-md-7">
+                    <div className="col-md-8">
                         <GameNumbers series={ this.state.numbers } />
                     </div>
-                    <div className="col-md-5">
+                    <div className="col-md-4">
                         <GameConfig target={ this.state.target } wager={ this.state.wager } start={ this.state.startSpinsAt } />
                     </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-12"><GameStats /></div>
                 </div>
 
                 <ol>

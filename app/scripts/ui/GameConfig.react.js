@@ -15,19 +15,19 @@ module.exports = React.createClass({
               <div className="row">
                 <div className="col-md-4">
                   <div className="form-group">
-                    <label for="targetSize">Target</label>
+                    <label htmlFor="targetSize">Target</label>
                     <input type="text" className="form-control" id="targetSize" placeholder={ this.state.target } />
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="form-group">
-                    <label for="wagerSize">Wager</label>
+                    <label htmlFor="wagerSize">Wager</label>
                     <input type="text" className="form-control" id="wagerSize" placeholder={ this.state.wager } />
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="form-group">
-                    <label for="startAt">Start at</label>
+                    <label htmlFor="startAt">Start at</label>
                     <input type="text" className="form-control" id="startAt" placeholder={ this.state.start } />
                   </div>
                 </div>
