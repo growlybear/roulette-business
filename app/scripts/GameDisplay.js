@@ -4,6 +4,7 @@ var GameDisplay = function () {
         body: []
     };
     this.columns = 0;
+    this.id = null;
 };
 
 GameDisplay.prototype.headers = function (arr) {
@@ -13,6 +14,10 @@ GameDisplay.prototype.headers = function (arr) {
 
 GameDisplay.prototype.row = function (arr) {
     this.data.body.push(arr);
+};
+
+GameDisplay.prototype.setId = function (num) {
+    this.id = num;
 };
 
 module.exports = GameDisplay;

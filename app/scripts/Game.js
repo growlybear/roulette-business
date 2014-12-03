@@ -84,6 +84,10 @@ Game.prototype.getNumbers = function () {
     return this.numbers;
 };
 
+Game.prototype.setId = function (val) {
+    return this.table.id = val;
+};
+
 Game.prototype.roundUpToNearestFive = function (num) {
     return Math.ceil(num / 5) * 5;
 };

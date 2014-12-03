@@ -34,15 +34,23 @@ var RouletteApp = React.createClass({
 
         // Play a game for each range and store the results in state
         [0,1,2,3,4,5].forEach(function (range) {
-            // Get results for each game
-            var game = new Game(that.state.target, that.state.range, that.state.wager);
-            game.play();
 
-            that.setState({games: that.state.games.concat([game.results()])});
+            // Get results for each game
+            var game = new Game(that.state.target, range, that.state.wager);
+            game.play();
+            game.setId(range);
+
+            var results = game.results();
+            // cf. http://stackoverflow.com/questions/26253351/correct-modification-of-state-arrays-in-reactjs?lq=1
+            var current = that.state.games;
+            current.push(results);
+
+            that.setState({ games: current });
 
             // Get global stats
             var numbers = game.getNumbers();
             if (numbers.length > that.state.numbers.length) {
+                // Store only the longest run of numbers (smaller ones will be identical to that point)
                 that.setState({ numbers: numbers });
             }
         });
@@ -60,7 +68,11 @@ var RouletteApp = React.createClass({
         return (
             <div className="container">
                 <Header />
-                { this.state.games }
+                <ol>
+                { this.state.games.map(function (game) {
+                    return <li key={ game.id }>{ game }</li>;
+                })}
+                </ol>
                 <p className="bg-success">{ this.state.numbers }</p>
                 <Footer />
             </div>
