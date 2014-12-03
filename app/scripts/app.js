@@ -87,7 +87,7 @@ var RouletteApp = React.createClass({
                     return <li key={ game.id }>{ game }</li>;
                 })}
                 </ol>
-                <p className="bg-success">{ this.state.numbers }</p>
+
                 <Footer />
             </div>
         );
